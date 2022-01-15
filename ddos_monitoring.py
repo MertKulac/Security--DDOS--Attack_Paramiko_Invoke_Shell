@@ -180,26 +180,26 @@ def ddos_update():
                     ddos3.append(words14)
 
                 if IP2 != "" and words14 != "":
-                    IPStatus2 = "Anons Yok" if words14 == "0.0.0.0/0" else "Anons Var"
+                    IPStatus2 = "Announce False" if words14 == "0.0.0.0/0" else "Announce True"
                     Color = "red" if words14 == "0.0.0.0/0" else "green"
-                    if IPStatus2 == "Anons Var" and "92.44.0.146" not in IP2 and "92.44.0.251":
+                    if IPStatus2 == "Announce True" and "92.44.0.146" not in IP2 and "92.44.0.251":
                         ExcelExport.append([HostName, x, words14, IP2, TAC])
-                        Flag = True if IPStatus2 == "Anons Var" else Flag
+                        Flag = True if IPStatus2 == "Announce True" else Flag
                     print(colored(x  + " " + IPStatus2, Color))
                     IP2, words14 = "", ""
 
 
     except Exception as e:
-        print("erisim yok_" + "\n")
+        print("problem_" + "\n")
 
-    XLSExport(ExcelExport, "DDOS 2.0", "Devre Anons Kontrol.xlsx")
+    XLSExport(ExcelExport, "DDOS 2.0", "Announce Control.xlsx")
 
     if Flag:
-        SendMailwAttachment_(ExcelExport, "Devre Anons Kontrol.xlsx")
+        SendMailwAttachment_(ExcelExport, "Announce Control.xlsx")
     else:
-        print("Aksiyon olmadığı için mail atılmadı")
+        print(" As there is no problem, no mail is send")
 
-    os.remove('sonuc.txt')
+    os.remove('result.txt')
 
 
 ddos_update()
