@@ -1,5 +1,5 @@
 # Network Automation---DDOS
-DDOS VRF Announce Control with Python
+Tracing IP prefixes where DDOS attacks are received in MPLS-VRF layer
 
 
 # DDOS:
@@ -7,6 +7,3 @@ DDoS (Distributed Denial of Service) is a category of malicious cyber-attacks th
 
 # VRF:
 Virtual routing and forwarding (VRF) is an IP-based computer network technology that enables the simultaneous co-existence of multiple virtual routers (VRs) as instances or virtual router instances (VRIs) within the same router.
-
-
-
