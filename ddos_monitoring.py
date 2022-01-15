@@ -1,6 +1,4 @@
 def ddos_update():
-
-    ExcelExport = [["CI", "IP", "Global Network", "Global Next Hop", "TAC"]]
     
 #-------------Opening Input.txt--------------#
     with open('input.log') as f: 
@@ -10,6 +8,8 @@ def ddos_update():
     for line in lines:
         if 'cus' in line and "cloud" not in line and "profiled" not in line and "profiled_router" not in line and "parent" not in line:
             input1.append(line)
+            
+ExcelExport = [["CI", "IP", "Global Network", "Global Next Hop", "TAC"]]
 
  #-------------Parsing required data from input.txt using REGEX--------------#
     customer_id = []
