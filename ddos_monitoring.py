@@ -110,10 +110,10 @@ ExcelExport = [["CI", "IP", "Global Network", "Global Next Hop", "TAC"]]
         output_list_fnk1 = result.splitlines()
 
         ilk_prefix = []
-        Anons_IP = '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\/\d\d?'
+        Announce_IP = '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\/\d\d?'
 
         for line in output_list_fnk1:
-            id3 = re.findall(Anons_IP, line)
+            id3 = re.findall(Announce_IP, line)
             id4 = "".join(id3)
             ilk_prefix.append(id4)
 
