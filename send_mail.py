@@ -7,7 +7,6 @@ def SendMailwAttachment_(List_, Ek):
 
     ServerIP_, Port_ = "10.218.130.60", 25
 
-    # /// MAIL DEĞİŞKENLER
     From_ = "TEST@smtp.test.com"
     FromAlias_ = "TEST"
     To_ = ["mertkulac@test.com"]
